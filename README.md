@@ -17,3 +17,7 @@ It expose these stats in an HTTP interface on localhost://8080/event
 + [Install Maven on Linux](https://www.baeldung.com/install-maven-on-windows-linux-mac#installing-maven-on-linux)
 + [Install Maven on Mac OSX](https://www.baeldung.com/install-maven-on-windows-linux-mac#installing-maven-on-mac-os-x)
 
+### Run
+please run the App.java file for begining
+
+##### enjoy :)
