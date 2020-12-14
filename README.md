@@ -9,7 +9,7 @@ exposnation these stats in an HTTP interface
 
 ### What you'll neead
 + A favorite text editor or IDE
-+ JDK 6 or later
++ JDK 8 or later
 + Install Maven
 
 ### Install Maven
