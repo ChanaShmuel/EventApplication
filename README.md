@@ -1,11 +1,11 @@
 # Event
 
-This ex implement a Non Blocking Producer/Consumer stream processing service It consume the output of the generator and gather the following stats:
+This project implement a Non Blocking Producer/Consumer stream processing service It consume the output of the generator and gather the following stats:
 + A count of events by event type.
 + A count of words encountered in the data field of the events.
 + receive the stats above in the last 60 seconds
 
-exposnation these stats in an HTTP interface
+It expose these stats in an HTTP interface on localhost://8080/event 
 
 ### What you'll neead
 + A favorite text editor or IDE
