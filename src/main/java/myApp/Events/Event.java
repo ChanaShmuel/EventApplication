@@ -1,4 +1,4 @@
-package myApp.Events;
+package myApp.events;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

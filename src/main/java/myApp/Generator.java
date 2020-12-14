@@ -1,8 +1,8 @@
 package myApp;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import myApp.Events.Event;
-import myApp.Events.EventsStatistics;
+import myApp.events.Event;
+import myApp.events.EventsStatistics;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,6 +22,7 @@ public class Generator implements Runnable {
         try {
             produceEvents();
         } catch (IOException e) {
+            e.printStackTrace();
             LOGGER.log(Level.SEVERE, "Can't run the exe file");
         }
     }
@@ -41,12 +42,14 @@ public class Generator implements Runnable {
         try {
             while ((line = stdInput.readLine()) != null) {
                 try {
-                    // LOGGER.log(Level.INFO, "Convent the input from jason to Event object  :\n");
+                    // LOGGER.log(Level.INFO, "Convest the input from jason to Event object  :\n");
                     Event event = objectMapper.readValue(line, Event.class);
-
                     EventsStatistics.addEvent(event);
                 } catch (Exception ex) {
                     LOGGER.log(Level.SEVERE, "Invalid json object" + line, ex.getMessage());
+                } finally {
+                    //System.out.println("check...");
+                    EventsStatistics.removeEventsThatMoreThan_x_Sec();
                 }
             }
         } catch (IOException ex) {
